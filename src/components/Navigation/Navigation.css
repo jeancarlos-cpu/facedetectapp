@@ -1,0 +1,49 @@
+nav {
+    margin: 0;
+    /* border-bottom: solid 0.1px white; */
+    border-radius: 40 px;
+    transition: all 1.5s linear;
+    height: 70px;
+    width: 100%;
+}
+
+.main-nav {
+    /* background-color: var(--bg-color); */
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0px;
+    padding: 0 5px;
+    font-size: 1.6em;
+    height: 100%;
+    width: auto;
+}
+
+
+.main-nav:hover {
+    box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px, inset rgba(0, 0, 0, 0.15) 0px -10px 20px;
+}
+
+li {
+    padding: 0 10px;
+}
+
+
+a {
+    /* font-family: "oswald"; */
+    text-decoration: none;
+    /* color: var(--acc3-color); */
+    color: white;
+}
+
+/* a:hover {
+    color: var(--acc1-color);
+} */
+
+
+.push {
+    margin-left: auto;
+}
+
+
