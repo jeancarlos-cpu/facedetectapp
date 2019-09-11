@@ -1,5 +1,8 @@
-.Tilt {
-    background: linear-gradient(to right, #0052d4, #4364f7, #6fb1fc);
+.Tilt:hover {
+    background: linear-gradient(to right, #0052d455, #4364f755, #6fb1fc55);
+}
+.Tilt{
+    border-radius: 15px;
 }
 
 img {

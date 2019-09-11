@@ -2,9 +2,3 @@
   text-align: center;
 }
 
-.background {
-  position: fixed;
-  width: 150%;
-  height: 100%;
-  z-index: -1;
-}

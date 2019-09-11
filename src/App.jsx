@@ -3,17 +3,17 @@ import 'tachyons'
 import './App.css';
 import BackGround from './components/BackGround/BackGround';
 import Navigation from './components/Navigation/Navigation';
+import InputField from './components/InputField/InputField';
 
 function App() {
   return (
-    <div>
-      <div className="background">
-        <BackGround/>
-      </div>
       <div className="App">
-        <Navigation />
+      <div className="particles">
+        <BackGround />
       </div>
-    </div>
+        <Navigation />
+        <InputField />
+      </div>
   );
 }
 
