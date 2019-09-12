@@ -1,6 +1,11 @@
-
 body{
   margin: 0;
   padding: 0;
   background: linear-gradient(to right, #0052d4, #4364f7, #6fb1fc);
+  font-family: 'roboto';
+}
+
+@font-face{
+  src: url('./Roboto-Medium.ttf');
+  font-family: 'roboto';
 }

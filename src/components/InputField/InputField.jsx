@@ -1,15 +1,15 @@
 import React from 'react';
 import "./InputField.css"
 
-const InputField = () => {
+const InputField = ({ onInput, onSubmit }) => {
     return (
-        <div>
+        <div >
             <div>
                 <p className="tc">This powerful brain will detect faces.</p>
             </div>
-            <div className="input">
-                <input className="f4 pa2 w-70 center" type="text" />
-                <button className="f4 pv2 ph3 white w-30 grow link center"></button>
+            <div className="input ph3 pv3 br3 mh7 shadow-5">
+                <input className="f4 pa2 w-70 center" type="text" placeholder="image URL" onInput={onInput} />
+                <button className="f4 pv2 ph3 white w-30 grow link center bg-green" onClick={onSubmit}>Detect</button>
             </div>
         </div>
     )

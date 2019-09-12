@@ -10,26 +10,26 @@ const BackGround = () => {
 			params={{
 				"particles": {
 					"number": {
-						"value": 460,
+						"value": 100,
 						"density": {
 							"enable": false
 						}
 					},
 					"size": {
-						"value": 5,
+						"value": 1,
 						"random": true,
 						"anim": {
-							"speed": 8,
+							"speed": 90,
 							"size_min": 0.6
 						}
 					},
 					"line_linked": {
-						"enable": false
+						"enable": true
 					},
 					"move": {
 						"random": true,
-						"speed": 1,
-						"direction": "top",
+						"speed": 1.3,
+						"direction": "random",
 						"out_mode": "out"
 					}
 				},
@@ -40,7 +40,7 @@ const BackGround = () => {
 							"mode": "bubble"
 						},
 						"onclick": {
-							"enable": true,
+							"enable": false,
 							"mode": "repulse"
 						}
 					},
