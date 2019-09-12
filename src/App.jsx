@@ -7,6 +7,8 @@ import Navigation from './components/Navigation/Navigation';
 import InputField from './components/InputField/InputField';
 import Rank from './components/Rank/Rank';
 import FaceRec from './components/FaceRec/FaceRec';
+import SignIn from './components/SignIn/SingIn';
+import Register from './components/Register/Register';
 
 const app = new Clarifai.App({
   apiKey: 'b9be71ebc84e479d915f0371d67995f9'
@@ -19,7 +21,8 @@ class App extends Component {
     this.state = {
       input: '',
       imageUrl: '',
-      box: {}
+      box: {},
+      route: 'signin'
     }
   }
 
@@ -34,6 +37,14 @@ class App extends Component {
       .then(response => this.displayBox(this.calculateFaceLocation(response)))
       .catch(err => console.log(err));
 
+  }
+
+  onRoute = (route) => {
+    this.setState({ route: route })
+  }
+
+  inputClear = (event) => {
+    event.target.value = '';
   }
 
   calculateFaceLocation = (data) => {
@@ -51,18 +62,28 @@ class App extends Component {
   }
 
   displayBox = (box) => {
-    console.log(box)
     this.setState({ box: box })
   }
 
   render() {
+    const { route, box, imageUrl } = this.state;
     return (
       <div className="App">
         <BackGround />
-        <Navigation />
-        <Rank />
-        <InputField onInput={this.onInput} onSubmit={this.onSubmit} />
-        <FaceRec box={this.state.box} imageUrl={this.state.imageUrl} />
+        <Navigation Route={route} onRoute={this.onRoute} />
+        {route === "home" ?
+          <div>
+            <Rank />
+            <InputField onInput={this.onInput} onSubmit={this.onSubmit} inputClear={this.inputClear} />
+            <FaceRec box={box} imageUrl={imageUrl} />
+          </div>
+          : (
+            this.state.route === "signin" ?
+              <SignIn onRoute={this.onRoute} />
+              :
+              <Register onRoute={this.onRoute} />
+          )
+        }
       </div>
     );
 

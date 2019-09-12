@@ -13,7 +13,7 @@ const FaceRec = ({ imageUrl, box }) => {
     return (
         <div className="center">
             <div className=" absolute mt2">
-                <img id="faceimg" src={imageUrl} alt="" />
+                <img className='shadow-5' id="faceimg" src={imageUrl} alt="" />
                 <div className='bounding-box' style={divStyle}>
                 </div>
             </div>
