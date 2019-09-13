@@ -30,6 +30,12 @@ li {
     padding: 0 10px;
 }
 
+@media (max-width: 600px){
+    li{
+        font-size: 0.8rem;
+    }
+}
+
 
 a {
     /* font-family: "oswald"; */

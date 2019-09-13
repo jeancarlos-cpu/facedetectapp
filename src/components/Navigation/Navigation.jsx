@@ -19,7 +19,7 @@ const Navigation = ({ Route, onRoute }) => {
 
                     {
                         Route === "home" ?
-                        <li onClick={() => onRoute("signin")} className="push pointer"><a href="#Cadastro" className="hyperlink"> Sign out </a></li>    
+                        <li onClick={() => onRoute("signin")} className="push pointer"><a className="hyperlink"> Sign out </a></li>    
                         :
                         <li className="push"></li>
                         // <li className="push"><a href="#Cadastro" className="hyperlink pointer"></a></li>
